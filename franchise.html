@@ -37,6 +37,11 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+      
   </head>
 
   <body>
@@ -163,159 +168,115 @@
     <div class="container-fluid overflow-hidden my-5 px-lg-0">
       <div class="container quote px-lg-0">
         <div class="row g-0 mx-lg-0">
-          <div
-            class="col-lg-6 quote-text"
-            data-parallax="scroll"
-            data-image-src="img/carousel-1.jpg"
-          >
-            <div
-              class="h-100 px-4 px-sm-5 ps-lg-0 wow fadeIn"
-              data-wow-delay="0.1s"
-            >
+          <div class="col-lg-6 quote-text" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+            <div class="h-100 px-4 px-sm-5 ps-lg-0 wow fadeIn" data-wow-delay="0.1s">
               <h1 class="text-white mb-4">Franchise Enquiry Form</h1>
               <p class="text-light mb-5">
-                A franchise is a contractual agreement between a franchisor and a franchisee, where the franchisor gives the franchisee the right to use their brand, business model, and other intellectual property to sell products or services. In return, the franchisee pays the franchisor a fee, or royalty, and may also share some of their profits. 
-
-
+                A franchise is a contractual agreement between a franchisor and a franchisee, where the franchisor gives the franchisee the right to use their brand, business model, and other intellectual property to sell products or services. In return, the franchisee pays the franchisor a fee, or royalty, and may also share some of their profits.
               </p>
-              <a href="index.html" class="align-self-start btn btn-primary py-3 px-5"
-                >More Details</a
-              >
+              <a href="index.html" class="align-self-start btn btn-primary py-3 px-5">More Details</a>
             </div>
           </div>
-          <div
-            class="col-lg-6 quote-form"
-            data-parallax="scroll"
-            data-image-src="img/carousel-2.jpg"
-          >
-            <div
-              class="h-100 px-4 px-sm-5 pe-lg-0 wow fadeIn"
-              data-wow-delay="0.5s"
-            >
+          <div class="col-lg-6 quote-form" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+            <div class="h-100 px-4 px-sm-5 pe-lg-0 wow fadeIn" data-wow-delay="0.5s">
               <div class="bg-white p-4 p-sm-5">
-                <div class="row g-3">
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="gname"
-                        placeholder="Gurdian Name"
-                      />
-                      <label for="gname">Name</label>
+                <form id="myForm">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Name" />
+                        <label for="name">Name</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="gmail"
-                        placeholder="Gurdian Email"
-                      />
-                      <label for="gmail">Email</label>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input type="email" class="form-control" id="gmail" placeholder="Email" />
+                        <label for="gmail">Email</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="cname"
-                        placeholder="Child Name"
-                      />
-                      <label for="cname">Mobile</label>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="mobile_number" placeholder="Mobile" />
+                        <label for="mobile_number">Mobile</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="cage"
-                        placeholder="Child Age"
-                      />
-                      <label for="cage">Business Name</label>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="business_name" placeholder="Business Name" />
+                        <label for="business_name">Business Name</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                        <select class="form-floating" id="district">
-                            <option value="" disabled selected>Select District</option>
-                            <option value="Ariyalur">Ariyalur</option>
-                            <option value="Chengalpattu">Chengalpattu</option>
-                            <option value="Chennai">Chennai</option>
-                            <option value="Coimbatore">Coimbatore</option>
-                            <option value="Cuddalore">Cuddalore</option>
-                            <option value="Dharmapuri">Dharmapuri</option>
-                            <option value="Dindigul">Dindigul</option>
-                            <option value="Erode">Erode</option>
-                            <option value="Kallakurichi">Kallakurichi</option>
-                            <option value="Kanchipuram">Kanchipuram</option>
-                            <option value="Kanyakumari">Kanyakumari</option>
-                            <option value="Karur">Karur</option>
-                            <option value="Krishnagiri">Krishnagiri</option>
-                            <option value="Madurai">Madurai</option>
-                            <option value="Mayiladuthurai">Mayiladuthurai</option>
-                            <option value="Nagapattinam">Nagapattinam</option>
-                            <option value="Namakkal">Namakkal</option>
-                            <option value="Nilgiris">Nilgiris</option>
-                            <option value="Perambalur">Perambalur</option>
-                            <option value="Pudukkottai">Pudukkottai</option>
-                            <option value="Ramanathapuram">Ramanathapuram</option>
-                            <option value="Ranipet">Ranipet</option>
-                            <option value="Salem">Salem</option>
-                            <option value="Sivagangai">Sivagangai</option>
-                            <option value="Tenkasi">Tenkasi</option>
-                            <option value="Thanjavur">Thanjavur</option>
-                            <option value="Theni">Theni</option>
-                            <option value="Thoothukudi">Thoothukudi</option>
-                            <option value="Tiruchirappalli">Tiruchirappalli</option>
-                            <option value="Tirunelveli">Tirunelveli</option>
-                            <option value="Tirupathur">Tirupathur</option>
-                            <option value="Tiruppur">Tiruppur</option>
-                            <option value="Tiruvallur">Tiruvallur</option>
-                            <option value="Tiruvannamalai">Tiruvannamalai</option>
-                            <option value="Tiruvarur">Tiruvarur</option>
-                            <option value="Vellore">Vellore</option>
-                            <option value="Viluppuram">Viluppuram</option>
-                            <option value="Virudhunagar">Virudhunagar</option>
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <select class="form-control" id="district">
+                          <option value="" disabled selected>Select District</option>
+                          <option value="Ariyalur">Ariyalur</option>
+                          <option value="Chengalpattu">Chengalpattu</option>
+                          <option value="Chennai">Chennai</option>
+                          <option value="Coimbatore">Coimbatore</option>
+                          <option value="Cuddalore">Cuddalore</option>
+                          <option value="Dharmapuri">Dharmapuri</option>
+                          <option value="Dindigul">Dindigul</option>
+                          <option value="Erode">Erode</option>
+                          <option value="Kallakurichi">Kallakurichi</option>
+                          <option value="Kanchipuram">Kanchipuram</option>
+                          <option value="Kanyakumari">Kanyakumari</option>
+                          <option value="Karur">Karur</option>
+                          <option value="Krishnagiri">Krishnagiri</option>
+                          <option value="Madurai">Madurai</option>
+                          <option value="Mayiladuthurai">Mayiladuthurai</option>
+                          <option value="Nagapattinam">Nagapattinam</option>
+                          <option value="Namakkal">Namakkal</option>
+                          <option value="Nilgiris">Nilgiris</option>
+                          <option value="Perambalur">Perambalur</option>
+                          <option value="Pudukkottai">Pudukkottai</option>
+                          <option value="Ramanathapuram">Ramanathapuram</option>
+                          <option value="Ranipet">Ranipet</option>
+                          <option value="Salem">Salem</option>
+                          <option value="Sivaganga">Sivaganga</option>
+                          <option value="Tenkasi">Tenkasi</option>
+                          <option value="Thanjavur">Thanjavur</option>
+                          <option value="Theni">Theni</option>
+                          <option value="Thiruvallur">Thiruvallur</option>
+                          <option value="Thiruvarur">Thiruvarur</option>
+                          <option value="Tuticorin">Tuticorin</option>
+                          <option value="Tiruchirappalli">Tiruchirappalli</option>
+                          <option value="Tirunelveli">Tirunelveli</option>
+                          <option value="Tirupathur">Tirupathur</option>
+                          <option value="Tiruppur">Tiruppur</option>
+                          <option value="Tiruvannamalai">Tiruvannamalai</option>
+                          <option value="Vellore">Vellore</option>
+                          <option value="Viluppuram">Viluppuram</option>
+                          <option value="Virudhunagar">Virudhunagar</option>
                         </select>
                         <label for="district" class="fw-bolder">District</label>
+                      </div>
                     </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="form-floating">
-                      <input type="file" class="form-floating" id="fileUpload" placeholder="Choose File" />
-                      <label for="fileUpload">Aadhar or any ID Proof </label>
-                  </div>
-              </div>
-              
-                
-                  <div class="col-12">
-                    <div class="form-floating">
-                      <textarea
-                        class="form-control"
-                        placeholder="Leave a message here"
-                        id="message"
-                        style="height: 80px"
-                      ></textarea>
-                      <label for="message">Description (Your Requirements)</label>
+                    
+                    <div class="col-sm-6">
+                      <div class="form-floating">
+                        <input type="file" class="form-control" id="fileUpload" placeholder="Choose File" />
+                        <label for="fileUpload">Aadhar or any ID Proof</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea>
+                        <label for="message">Description (Your Requirements)</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary py-3 px-5" type="submit">Submit</button>
                     </div>
                   </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary py-3 px-5" type="submit">
-                      Submit
-                    </button>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
     <!-- Franshice End -->
 
     <!-- Footer Start -->
@@ -415,6 +376,64 @@
       class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
+    <script>
+    (function () {
+      emailjs.init("T1MyGs7xr5h_Ia8bU");
+    })();
+    
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+      sendMessage(); // Call the sendMessage function
+      sendemail(); // Call the sendemail function
+    });
+    
+    function sendMessage() {
+      var phonenumber = "+8438438413"; // Your WhatsApp phone number
+      var name = document.getElementById("name").value;
+      var gmail = document.getElementById("gmail").value;
+      var mobile_number = document.getElementById("mobile_number").value;
+      var business_name = document.getElementById("business_name").value;
+      var district = document.getElementById("district").value;
+    
+      var url = "https://wa.me/" + phonenumber + "?text=" +
+        "Name: " + name + "%0a" +
+        "Gmail: " + gmail + "%0a" +
+        "Mobile Number: " + mobile_number + "%0a" +
+        "Business Name: " + business_name + "%0a" +
+        "District: " + district + "%0a" +
+        "This message is sent via the contact form on our website.";
+    
+      window.open(url, '_blank').focus();
+    }
+    
+    function sendemail() {
+      var name = document.getElementById("name").value;
+      var gmail = document.getElementById("gmail").value;
+      var mobile_number = document.getElementById("mobile_number").value;
+      var business_name = document.getElementById("business_name").value;
+      var district = document.getElementById("district").value;
+      var proof = document.getElementById("fileUpload").files[0]; // Correctly reference file input
+    
+      var templateParams = {
+        district: district,
+        proof: proof,
+        name: name,
+        gmail: gmail,
+        mobile_number: mobile_number,
+        business_name: business_name,
+      };
+    
+      emailjs.send("service_v4mt5xn", "template_ob7m2me", templateParams)
+        .then(function(response) {
+          console.log("SUCCESS!", response.status, response.text);
+          window.alert("Sent successfully!");
+        }, function(error) {
+          console.error("FAILED...", error);
+          window.alert("Failed to send email. Please try again later.");
+        });
+    }
+    
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
