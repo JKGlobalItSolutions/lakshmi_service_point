@@ -37,6 +37,11 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+  ></script>
   </head>
 
   <body>
@@ -131,274 +136,212 @@
 <!-- Navbar End -->
 
    
-    <!-- Franchise start -->
-    <div class="container-fluid overflow-hidden my-5 px-lg-0">
+     <!-- partner start -->
+     <div class="container-fluid overflow-hidden my-5 px-lg-0">
       <div class="container quote px-lg-0">
         <div class="row g-0 mx-lg-0">
-          <div
-            class="col-lg-6 quote-text"
-            data-parallax="scroll"
-            data-image-src="img/carousel-1.jpg"
-          >
-            <div
-              class="h-100 px-4 px-sm-5 ps-lg-0 wow fadeIn"
-              data-wow-delay="0.1s"
-            >
-              <h1 class="text-white mb-4">Partner with Us</h1>
+          <div class="col-lg-6 quote-text" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+            <div class="h-100 px-4 px-sm-5 ps-lg-0 wow fadeIn" data-wow-delay="0.1s">
+              <h1 class="text-white mb-4">Partner With Us</h1>
               <p class="text-light mb-5">
-                In our mind, a TRUE partnership means that we can be relied on before, during, and after a project whether it be for a simple question, a follow on assessment, or speaking through recent regulations and the impacts to your firm. 
-
-
-              </p>
-              <a href="index.html" class="align-self-start btn btn-primary py-3 px-5"
-                >More Details</a
-              >
+                Are you looking to be part of a successful and thriving business model? Partnering with us could be your next great business opportunity.              </p>
+              <a href="index.html" class="align-self-start btn btn-primary py-3 px-5">More Details</a>
             </div>
           </div>
-          <div
-            class="col-lg-6 quote-form"
-            data-parallax="scroll"
-            data-image-src="img/carousel-2.jpg"
-          >
-            <div
-              class="h-100 px-4 px-sm-5 pe-lg-0 wow fadeIn"
-              data-wow-delay="0.5s"
-            >
+          <div class="col-lg-6 quote-form" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+            <div class="h-100 px-4 px-sm-5 pe-lg-0 wow fadeIn" data-wow-delay="0.5s">
               <div class="bg-white p-4 p-sm-5">
-                <div class="row g-3">
-                  <div class="col-sm-6">
-                    <div class="form-floating" required>
-                      <input 
-                        type="text"
-                        class="form-control"
-                        id="gname"
-                        placeholder="Gurdian Name" 
-                      />
-                      <label for="gname" >Name</label>
-                      
+                <form id="myForm">
+                  <div class="row g-3">
+                    <h1 class="display-6 mb-5">Partner With Us </h1>
+                    <div class="col-sm-6">
+                      <label for="name" class="fw-bolder">Name</label>
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Name" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                      <input required
-                        type="email"
-                        class="form-control"
-                        id="gmail"
-                        placeholder="Gurdian Email"
-                      />
-                      <label for="gmail">Email</label>
+                    <div class="col-sm-6">
+                      <label for="gmail" class="fw-bolder">Email</label>
+                      <div class="form-floating">
+                        <input type="email" class="form-control" id="gmail" placeholder="Email" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                      <input required
-                        type="text"
-                        class="form-control"
-                        id="cname"
-                        placeholder="Child Name"
-                      />
-                      <label for="cname">Mobile Number</label>
+                    <div class="col-sm-6">
+                      <label for="mobile_number" class="fw-bolder">Mobile</label>
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="mobile_number" placeholder="Mobile" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                      <input required
-                        type="text"
-                        class="form-control"
-                        id="cage"
-                        placeholder="Child Age"
-                      />
-                      <label for="cage">Company Name/Website</label>
+                    <div class="col-sm-6">
+                      <label for="business_name" class="fw-bolder">Business Name</label>
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="business_name" placeholder="Business Name" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-floating">
-                        <label for="district" class="fw-bolder">District</label><br>
-                        <select class="form-floating" id="district">
-                            <option value="" disabled selected>Select District</option>
-                            <option value="Ariyalur">Ariyalur</option>
-                            <option value="Chengalpattu">Chengalpattu</option>
-                            <option value="Chennai">Chennai</option>
-                            <option value="Coimbatore">Coimbatore</option>
-                            <option value="Cuddalore">Cuddalore</option>
-                            <option value="Dharmapuri">Dharmapuri</option>
-                            <option value="Dindigul">Dindigul</option>
-                            <option value="Erode">Erode</option>
-                            <option value="Kallakurichi">Kallakurichi</option>
-                            <option value="Kanchipuram">Kanchipuram</option>
-                            <option value="Kanyakumari">Kanyakumari</option>
-                            <option value="Karur">Karur</option>
-                            <option value="Krishnagiri">Krishnagiri</option>
-                            <option value="Madurai">Madurai</option>
-                            <option value="Mayiladuthurai">Mayiladuthurai</option>
-                            <option value="Nagapattinam">Nagapattinam</option>
-                            <option value="Namakkal">Namakkal</option>
-                            <option value="Nilgiris">Nilgiris</option>
-                            <option value="Perambalur">Perambalur</option>
-                            <option value="Pudukkottai">Pudukkottai</option>
-                            <option value="Ramanathapuram">Ramanathapuram</option>
-                            <option value="Ranipet">Ranipet</option>
-                            <option value="Salem">Salem</option>
-                            <option value="Sivagangai">Sivagangai</option>
-                            <option value="Tenkasi">Tenkasi</option>
-                            <option value="Thanjavur">Thanjavur</option>
-                            <option value="Theni">Theni</option>
-                            <option value="Thoothukudi">Thoothukudi</option>
-                            <option value="Tiruchirappalli">Tiruchirappalli</option>
-                            <option value="Tirunelveli">Tirunelveli</option>
-                            <option value="Tirupathur">Tirupathur</option>
-                            <option value="Tiruppur">Tiruppur</option>
-                            <option value="Tiruvallur">Tiruvallur</option>
-                            <option value="Tiruvannamalai">Tiruvannamalai</option>
-                            <option value="Tiruvarur">Tiruvarur</option>
-                            <option value="Vellore">Vellore</option>
-                            <option value="Viluppuram">Viluppuram</option>
-                            <option value="Virudhunagar">Virudhunagar</option>
+                    <div class="col-sm-6">
+                      <label for="district" class="fw-bolder">District</label>
+                      <div class="">
+                        <select class="form-control" id="district">
+                          <option value="" disabled selected>Select District</option>
+                          <option value="Ariyalur">Ariyalur</option>
+                          <option value="Chengalpattu">Chengalpattu</option>
+                          <option value="Chennai">Chennai</option>
+                          <option value="Coimbatore">Coimbatore</option>
+                          <option value="Cuddalore">Cuddalore</option>
+                          <option value="Dharmapuri">Dharmapuri</option>
+                          <option value="Dindigul">Dindigul</option>
+                          <option value="Erode">Erode</option>
+                          <option value="Kallakurichi">Kallakurichi</option>
+                          <option value="Kanchipuram">Kanchipuram</option>
+                          <option value="Kanyakumari">Kanyakumari</option>
+                          <option value="Karur">Karur</option>
+                          <option value="Krishnagiri">Krishnagiri</option>
+                          <option value="Madurai">Madurai</option>
+                          <option value="Mayiladuthurai">Mayiladuthurai</option>
+                          <option value="Nagapattinam">Nagapattinam</option>
+                          <option value="Namakkal">Namakkal</option>
+                          <option value="Nilgiris">Nilgiris</option>
+                          <option value="Perambalur">Perambalur</option>
+                          <option value="Pudukkottai">Pudukkottai</option>
+                          <option value="Ramanathapuram">Ramanathapuram</option>
+                          <option value="Ranipet">Ranipet</option>
+                          <option value="Salem">Salem</option>
+                          <option value="Sivaganga">Sivaganga</option>
+                          <option value="Tenkasi">Tenkasi</option>
+                          <option value="Thanjavur">Thanjavur</option>
+                          <option value="Theni">Theni</option>
+                          <option value="Thiruvallur">Thiruvallur</option>
+                          <option value="Thiruvarur">Thiruvarur</option>
+                          <option value="Tuticorin">Tuticorin</option>
+                          <option value="Tiruchirappalli">Tiruchirappalli</option>
+                          <option value="Tirunelveli">Tirunelveli</option>
+                          <option value="Tirupathur">Tirupathur</option>
+                          <option value="Tiruppur">Tiruppur</option>
+                          <option value="Tiruvannamalai">Tiruvannamalai</option>
+                          <option value="Vellore">Vellore</option>
+                          <option value="Viluppuram">Viluppuram</option>
+                          <option value="Virudhunagar">Virudhunagar</option>
                         </select>
-                        
+                      </div>
                     </div>
-                </div>
-
-                <!-- <div class="col-sm-6">
-                  <div class="form-floating">
-                      <input type="file" class="form-floating" id="fileUpload" placeholder="Choose File" />
-                      <label for="fileUpload">Aadhar or any ID Proof </label>
-                  </div>
-              </div> -->
-
-              <div class="col-sm-6 ">
-                <div class="form-floating">
-                    <label for="district" class="m-0">Job Role</label>
-                    <select class="form-floating overflow-auto" id="district">
-                        <option value="" disabled selected>Select Services</option>
-                        <option value="Ariyalur">AC Service</option>
-                        <option value="Chengalpattu">Fridge Service</option>
-                        <option value="Chennai">Washing Machine Service</option>
-                        <option value="Coimbatore">RO Installination</option>
-                        <option value="Cuddalore">Water Heater</option>
-                        <option value="Cuddalore">Micro-oven Services</option>
-                        
-                    </select>
                     
-                </div>
-            </div>
-              
-                
-                  <!-- <div class="col-12">
-                    <div class="form-floating">
-                      <textarea
-                        class="form-control"
-                        placeholder="Leave a message here"
-                        id="message"
-                        style="height: 80px"
-                      ></textarea>
-                      <label for="message">Description (Your Requirements)</label>
+                    <div class="col-sm-6 ">
+                      <div class="">
+                          <label for="district" class="m-0 fw-bolder"  >Job Role</label>
+                          <select class="form-floating overflow-auto" id="jobrole">
+                              <option value="" disabled selected>Select Services</option>
+                              <option value="Ariyalur">AC Service</option>
+                              <option value="Chengalpattu">Fridge Service</option>
+                              <option value="Chennai">Washing Machine Service</option>
+                              <option value="Coimbatore">RO Installination</option>
+                              <option value="Cuddalore">Water Heater</option>
+                              <option value="Cuddalore">Micro-oven Services</option>
+                          </select>
+                      </div>
                     </div>
-                  </div> -->
-                  <div class="col-12">
-                    <button class="btn btn-primary py-3 px-5" type="submit">
-                      Submit
-                    </button>
+                    <div class="col-12">
+                      <button class="btn btn-primary py-3 px-5" type="submit">Submit</button>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Franshice End -->
+    
+    <!-- partner  End -->
 
-    <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
-      data-wow-delay="0.1s">
+                
+           
+      
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
       <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-md-6">
-            <h1 class="text-white mb-4">
-              <img
-                class="img-fluid me-3"
-                src="./img/Frame 260.png"
-                alt="" style="width: 350px; height: 200px;"
-              />
-            </h1>
-            
+          
+          <div class="row g-5">
+              <!-- <div class="col-md-6">
+                  <h1 class="text-white mb-4 d-flex w-50"><img class="img-fluid me-3" src="img/Frame 260.png" alt="">Lakshmi Service Point</h1>
+                  <span>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</span>
+              </div> -->
+              <!-- <div class="col-md-6">
+                  <h5 class="text-light mb-4">Newsletter</h5>
+                  <p>Clita erat ipsum et lorem et sit, sed stet lorem sit clita.</p>
+                  <div class="position-relative">
+                      <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                      <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                  </div>
+              </div> -->
+              <div class="row g-5">
+                  <div class="col-md-6">
+                    <h1 class="text-white mb-4">
+                      <img
+                        class="img-fluid me-3"
+                        src="./img/Frame 260.png"
+                        alt="" style="width: 350px; height: 200px;"
+                      />
+                    </h1>
+                    
+                  </div>
+                  <div class="col-md-6">
+                      <h5 class="text-light mt-5"><span
+                        >Welcome to Lakshmi Service Point!
+          
+                        At Lakshmi Service Point, we pride ourselves on delivering top-notch repair and maintenance services for your home appliances. Whether you need assistance with your air conditioner, RO system, water heater, refrigerator, washing machine, or LED TV, our team of experienced professionals is here to help.</span
+                      ></h5>
+                      </div>
+              <div class="col-lg-3 col-md-6">
+                  <h5 class="text-light mb-4">Get In Touch</h5>
+                  <p><i class="fa fa-map-marker-alt me-3"></i>Annai,Parvathi Nagar, Opposite to Collector Office, Vengikkal, Tiruvannamalai,Tamil Nadu 606604</p>
+                  <p><i class="fa fa-phone-alt me-3"></i>+8438438413</p>
+                  <p><i class="fa fa-envelope me-3"></i>support@lakshmiservicepoint.com</p>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h5 class="text-light mb-4">Our Services</h5>
+                  <a class="btn btn-link" href="feature.html">AC Repair Service</a>
+                  <a class="btn btn-link" href="quote.html">Fridge Service</a>
+                  <a class="btn btn-link" href="team.html">Washing Machine Service</a>
+                  <a class="btn btn-link" href="testimonial.html">RO Instalination</a>
+                  <a class="btn btn-link" href="404.html">Water Heater</a>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h5 class="text-light mb-4">Quick Links</h5>
+                  <a class="btn btn-link" href="about.html">About Us</a>
+                  <a class="btn btn-link" href="contact.html">Contact Us</a>
+                  <a class="btn btn-link" href="service.html">Our Services</a>
+                  <a class="btn btn-link" href="">Terms & Condition</a>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h5 class="text-light mb-4">Follow Us</h5>
+                  <div class="d-flex">
+                      <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+            <a class="btn btn-square rounded-circle me-1" href="https://x.com/Lakshmiservice1?t=FULDwPYkk3eZICcNrP1DAQ&s=08"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          
+            <a class="btn btn-square rounded-circle me-1" href="https://youtube.com/@lakshmiservicespoint?si=zKHOr0RNdU-YXlQ2"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a class="btn btn-square rounded-circle me-1" href="https://www.instagram.com/lakshmi_service_point?utm_source=qr&igsh=MXQwbWN6cTk5ZjBpeQ=="
+              ><i class="fab fa-instagram"></i
+            ></a>
+                  </div>
+              </div>
           </div>
-          <div class="col-md-6">
-            <h5 class="text-light mt-5"><span
-              >Welcome to Lakshmi Service Point!
-
-              At Lakshmi Service Point, we pride ourselves on delivering top-notch repair and maintenance services for your home appliances. Whether you need assistance with your air conditioner, RO system, water heater, refrigerator, washing machine, or LED TV, our team of experienced professionals is here to help.</span
-            ></h5>
-            <!-- <p>Clita erat ipsum et lorem et sit, sed stet lorem sit clita.</p>
-            <div class="position-relative">
-              <input
-                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-                type="text"
-                placeholder="Your email"
-              />
-              <button
-                type="button"
-                class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2"
-              >
-                SignUp
-              </button>
-            </div> -->
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Get In Touch</h5>
-            <p>
-              <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
-            </p>
-            <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-            <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Our Services</h5>
-            <a class="btn btn-link" href="">AC Installation</a>
-            <a class="btn btn-link" href="">Cooling Services</a>
-            <a class="btn btn-link" href="">Heating Services</a>
-            <a class="btn btn-link" href="">Annual Inspections</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Quick Links</h5>
-            <a class="btn btn-link" href="">About Us</a>
-            <a class="btn btn-link" href="">Contact Us</a>
-            <a class="btn btn-link" href="">Our Services</a>
-            <a class="btn btn-link" href="">Terms & Condition</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Follow Us</h5>
-            <div class="d-flex">
-              <a class="btn btn-square rounded-circle me-1" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-square rounded-circle me-1" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-square rounded-circle me-1" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-square rounded-circle me-1" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="container-fluid copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center text-sm-center mb-3 mb-md-0">
-              &copy; 2024 All Right Reserved | JK Global IT Solutions
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 text-center text-sm-center mb-3 mb-md-0">
+                    &copy; 2024 All Right Reserved |Lakshmi Service Point
+                </div>
           </div>
-            
-          </div>
-        </div>
       </div>
-    </div>
-    <!-- Footer End -->
+  </div>
+  <!-- Footer End -->
 
     <!-- Back to Top -->
     <a
@@ -406,6 +349,65 @@
       class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
+    <script>
+      (function () {
+        emailjs.init("T1MyGs7xr5h_Ia8bU");
+      })();
+      
+      document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        sendMessage(); // Call the sendMessage function
+        sendemail(); // Call the sendemail function
+      });
+      
+      function sendMessage() {
+        var phonenumber = "+8438438413"; // Your WhatsApp phone number
+        var name = document.getElementById("name").value;
+        var gmail = document.getElementById("gmail").value;
+        var mobile_number = document.getElementById("mobile_number").value;
+        var business_name = document.getElementById("business_name").value;
+        var district = document.getElementById("district").value;
+      
+        var url = "https://wa.me/" + phonenumber + "?text=" +
+          "Name: " + name + "%0a" +
+          "Gmail: " + gmail + "%0a" +
+          "Mobile Number: " + mobile_number + "%0a" +
+          "Business Name: " + business_name + "%0a" +
+          "District: " + district + "%0a" +
+          "This message is sent via the contact form on our website.";
+      
+        window.open(url, '_blank').focus();
+      }
+      
+      function sendemail() {
+        var name = document.getElementById("name").value;
+        var gmail = document.getElementById("gmail").value;
+        var mobile_number = document.getElementById("mobile_number").value;
+        var business_name = document.getElementById("business_name").value;
+        var district = document.getElementById("district").value;
+        var proof = document.getElementById("fileUpload").files[0]; // Correctly reference file input
+      
+        var templateParams = {
+          district: district,
+          proof: proof,
+          name: name,
+          gmail: gmail,
+          mobile_number: mobile_number,
+          business_name: business_name,
+        };
+      
+        emailjs.send("service_v4mt5xn", "template_m0ocm5l", templateParams)
+          .then(function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+            window.alert("Sent successfully!");
+          }, function(error) {
+            console.error("FAILED...", error);
+            window.alert("Failed to send email. Please try again later.");
+          });
+      }
+      
+      </script>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
