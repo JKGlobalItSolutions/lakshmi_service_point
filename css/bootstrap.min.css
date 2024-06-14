@@ -129,7 +129,7 @@ h4,
 }
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 h6,
 .h6 {
@@ -507,6 +507,10 @@ progress {
 }
 .img-fluid {
   max-width: 100%;
+  height: auto;
+}
+#imagefluid {
+  max-width: 60%;
   height: auto;
 }
 .img-thumbnail {
@@ -2549,7 +2553,7 @@ fieldset:disabled .btn {
 }
 .btn-primary {
   color: #000;
-  background-color: #ff800f;
+  background-color: #FC4100;
   border-color: #ff800f;
 }
 .btn-primary:hover {

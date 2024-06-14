@@ -520,7 +520,7 @@
         }
         50% {
           opacity: 1; /* Ensure the text is visible */
-          background-color:#FC4100; /* Highlight color */
+          background-color: #FC4100; /* Highlight color */
           color: rgb(246, 239, 239); /* Text color during the blink */
           border: 2px  rgb(50, 49, 49); /* Border for the blinking box */
           border-radius: 5%;
@@ -530,6 +530,95 @@
       .blink-link {
         animation: blink 1s infinite;
         padding: 2px 4px; /* Adding some padding for better visual effect */
+        width: 150px; /* Adjust width to fit the content */
+        height: auto; /* Adjust height to fit the content */
+        display: inline-block; /* Ensure it behaves like an inline element */
+        text-align: center;
+      }
+      /* font size start */
+      
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Adjust the font size as needed */
+    padding-right: 10px; /* Add space between links */
+    padding-left: 10px; /* Add space between links */
+  }
+  .navbar-nav .nav-link.blink-link {
+    font-size: 14px; /* Adjust the font size for blinking links */
+  }
+      /* blink */
+      @keyframes blink {
+        0%, 100% {
+          opacity: 1;
+          background-color: transparent;
+          color: inherit;
+          border: none;
+        }
+        50% {
+          opacity: 1; /* Ensure the text is visible */
+          background-color: #FC4100; /* Highlight color */
+          color: rgb(246, 239, 239); /* Text color during the blink */
+          border: 2px  rgb(50, 49, 49); /* Border for the blinking box */
+          border-radius: 5%;
+        }
       }
       
+      .blink-link {
+        animation: blink 1s infinite;
+        padding: 2px 4px; /* Adding some padding for better visual effect */
+        width: 110px; /* Adjust width to fit the content */
+        height: auto; /* Adjust height to fit the content */
+        display: inline-block; /* Ensure it behaves like an inline element */
+        text-align: center;
+      }
+      /* font size start */
       
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Adjust the font size as needed */
+    padding-right: 10px; /* Add space between links */
+    padding-left: 10px; /* Add space between links */
+  }
+  .navbar-nav .nav-link.blink-link {
+    font-size: 14px; /* Adjust the font size for blinking links */
+  }
+      
+      /* font size end */
+
+      /* enquire and booking button start */
+      #inquiryBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    
+    #inquiryBtn.jump {
+        animation: jump 0.5s ease;
+    }
+    
+    @keyframes jump {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    #inquiryForm {
+        margin-top: 20px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #inquiryForm label, #inquiryForm input, #inquiryForm textarea {
+        margin-bottom: 10px;
+    }
+    
+    #inquiryForm input[type="submit"] {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+      /* enquire and booking button end */
