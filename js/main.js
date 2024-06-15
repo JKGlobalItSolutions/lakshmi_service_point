@@ -56,3 +56,7 @@
     
 })(jQuery);
 
+// drop down script
+  $(document).ready(function () {
+      $('.dropdown-toggle').dropdown();
+  });
