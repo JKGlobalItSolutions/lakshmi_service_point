@@ -29,11 +29,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         (function() {
             emailjs.init("T1MyGs7xr5h_Ia8bU"); // Replace with your EmailJS user ID
         })();
-    </script>
+    </script> -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("PV-S6g-vK8SbNyYaC"); // Replace "YOUR_USER_ID" with your EmailJS user ID
+  })();
+</script>
 </head>
 <body>
     <!-- Spinner Start -->
@@ -138,8 +144,6 @@
         </div>
     </div>
     <!-- Page Header End -->
-
-
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
@@ -160,10 +164,10 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-                                    <label for="subject">Subject</label>
-                                </div>
+                              <div class="form-floating">
+                                <input type="tel" class="form-control" id="mobile" placeholder="Mobile Number" name="mobile" pattern="[0-9]{10}">
+                                <label for="mobile">Mobile Number</label>
+                            </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
@@ -185,6 +189,41 @@
         </div>
     </div>
     <!-- Contact End -->
+    <script type="text/javascript">
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        // Collect form data
+        var user_name = document.getElementById('name').value;
+        var user_email = document.getElementById('email').value;
+        var mobile = document.getElementById('mobile').value;
+        var message = document.getElementById('message').value;
+    
+        // Validate form data
+        if (!user_name || !user_email || !mobile || !message) {
+          alert("Please fill in all fields.");
+          return;
+        }
+    
+        if (!/^\d{10}$/.test(mobile)) {
+          alert("Please enter a valid 10-digit mobile number.");
+          return;
+        }
+    
+        // Send email using EmailJS
+        emailjs.send("service_3hjnd5i", "template_4tww8gj", {
+          user_name: user_name,
+          user_email: user_email,
+          mobile: mobile,
+          message: message
+        }).then(function(response) {
+          alert("Message sent successfully!");
+        }, function(error) {
+          alert("Failed to send message. Please try again later.");
+        });
+      });
+    </script>
+    
 
 
        <!-- Footer Start -->
@@ -218,7 +257,6 @@
                     <div class="col-md-6">
                         <h5 class="text-light mt-5"><span
                           >Welcome to Lakshmi Service Point!
-            
                           At Lakshmi Service Point, we pride ourselves on delivering top-notch repair and maintenance services for your home appliances. Whether you need assistance with your air conditioner, RO system, water heater, refrigerator, washing machine, or MicroWave Oven, our team of experienced professionals is here to help.</span
                         ></h5>
                         </div>
@@ -279,7 +317,7 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
     <!-- emaijs form start -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -290,7 +328,7 @@
                     alert('Failed to send message: ' + JSON.stringify(error));
                 });
         });
-    </script>
+    </script> -->
     <!-- emaijs form start -->
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

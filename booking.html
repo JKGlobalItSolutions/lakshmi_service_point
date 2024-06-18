@@ -31,7 +31,7 @@
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript">
         (function() {
-            emailjs.init("T1MyGs7xr5h_Ia8bU"); // Replace with your EmailJS user ID
+            emailjs.init("PV-S6g-vK8SbNyYaC"); // Replace with your EmailJS user ID
         })();
     </script>
 </head>
@@ -160,10 +160,10 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-                                    <label for="subject">Subject</label>
-                                </div>
+                              <div class="form-floating">
+                                <input type="tel" class="form-control" id="mobile" placeholder="Mobile Number" name="mobile" pattern="[0-9]{10}">
+                                <label for="mobile">Mobile Number</label>
+                            </div>
                             </div>
                             <div class="col-12">
                                 <label for="subject"> Service</label>
@@ -296,7 +296,7 @@
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            emailjs.sendForm('service_v4mt5xn', 'YOUR_TEMPLATE_ID', this)
+            emailjs.sendForm('service_3hjnd5i', 'template_50f7gw2', this)
                 .then(function() {
                     alert('Message sent successfully!');
                 }, function(error) {
