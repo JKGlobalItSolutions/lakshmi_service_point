@@ -27,6 +27,11 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+      .hidden {
+          display: none;
+      }
+  </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <script type="text/javascript">
@@ -166,19 +171,156 @@
                             </div>
                             </div>
                             <div class="col-12">
-                                <label for="subject"> Service</label>
-                                <div class="form-floating">
-                                    <select class="form-control" id="service" name="service">
-                                        <option value="" disabled selected>Select a Service</option>
-                                        <option value="ac_service">AC Service</option>
-                                        <option value="fridge">Fridge</option>
-                                        <option value="washing_machine">Washing Machine</option>
-                                        <option value="ro">RO</option>
-                                        <option value="water_heater">Water Heater</option>
-                                        <option value="microwave_oven">Microwave Oven</option>
-                                    </select>
-                                </div>
-                            </div>
+                              <label for="service">Service</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="service" name="service" onchange="toggleSubServices(this.value)">
+                                      <option value="" disabled selected>Select a Service</option>
+                                      <option value="ac_service">AC Service</option>
+                                      <option value="fridge">Fridge</option>
+                                      <option value="washing_machine">Washing Machine</option>
+                                      <option value="ro">RO</option>
+                                      <option value="water_heater">Water Heater</option>
+                                      <option value="microwave_oven">Microwave Oven</option>
+                                      <option value="led_tv">LED TV</option>
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <div class="col-12 hidden" id="ac_sub_services_container">
+                              <label for="ac_sub_services">AC Sub-Services</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="ac_sub_services" name="ac_sub_services">
+                                      <option value="" disabled selected>Select an AC Sub-Service</option>
+                                      <option value="ac_uninstallation">AC Uninstallation</option>
+                                      <option value="ac_uninstallation_installation">AC Uninstallation & Installation</option>
+                                      <option value="window_ac_uninstallation">Window AC Uninstallation</option>
+                                      <option value="ac_gas_filling">AC Gas Filling/Refilling (Get quote)</option>
+                                      <option value="duct_cassette_ac">Duct AC and Cassette AC (Per visit Inspection charge)</option>
+                                      <option value="ac_deep_cleaning">AC Deep Cleaning Service</option>
+                                      <option value="window_ac_uninstallation_installation">Window AC Uninstallation and Installation</option>
+                                      <option value="window_ac_installation">Window AC Installation</option>
+                                      <option value="ac_installation">AC Installation</option>
+                                      <option value="ac_general_cleaning">AC General Cleaning Service</option>
+                                      <option value="ac_repair_service">AC Repair & Service</option>
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <div class="col-12 hidden" id="washing_machine_sub_services_container">
+                              <label for="washing_machine_sub_services">Washing Machine Sub-Services</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="washing_machine_sub_services" name="washing_machine_sub_services">
+                                      <option value="" disabled selected>Select a Washing Machine Sub-Service</option>
+                                      <option value="semi_automatic">Semi-Automatic</option>
+                                      <option value="automatic">Automatic</option>
+                                      <option value="front_load">Front-load</option>
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <div class="col-12 hidden" id="led_tv_sub_services_container">
+                              <label for="led_tv_sub_services">LED TV Sub-Services</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="led_tv_sub_services" name="led_tv_sub_services">
+                                      <option value="" disabled selected>Select an LED TV Sub-Service</option>
+                                      <option value="tv_wall_mounting_below_40">TV Wall Mounting/Installation - Below 40"</option>
+                                      <option value="tv_uninstallation_below_40">TV Uninstallation - Below 40"</option>
+                                      <option value="tv_wall_mounting_uninstallation_above_55">TV Wall Mounting and Uninstallation - Above 55"</option>
+                                      <option value="tv_uninstallation_above_55">TV Uninstallation - Above 55"</option>
+                                      <option value="tv_wall_mounting_below_75">TV Wall Mounting/Installation - Below 75"</option>
+                                      <option value="led_lcd_tv_service">LED/LCD TV Service (Per visit Inspection charge)</option>
+                                      <option value="tv_wall_mounting_above_40">TV Wall Mounting/Installation - Above 40"</option>
+                                      <option value="tv_wall_mounting_uninstallation_below_40">TV Wall Mounting and Uninstallation - Below 40"</option>
+                                      <option value="tv_uninstallation_above_40">TV Uninstallation - Above 40"</option>
+                                      <option value="tv_wall_mounting_above_55">TV Wall Mounting/Installation - Above 55"</option>
+                                      <option value="tv_wall_mounting_above_75">TV Wall Mounting/Installation - Above 75"</option>
+                                      <option value="crt_tv_service">CRT TV Service</option>
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <div class="col-12 hidden" id="ro_sub_services_container">
+                              <label for="ro_sub_services">RO Sub-Services</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="ro_sub_services" name="ro_sub_services">
+                                      <option value="" disabled selected>Select an RO Sub-Service</option>
+                                      <option value="ro_uninstallation">RO Uninstallation</option>
+                                      <option value="ro_cleaning">RO Cleaning</option>
+                                      <option value="ro_repair_service">RO Repair and Service</option>
+                                      <option value="ro_uninstallation_installation">RO Uninstallation and Installation</option>
+                                      <option value="ro_repair">RO Repair</option>
+                                      <option value="ro_installation">RO Installation</option>
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <div class="col-12 hidden" id="water_heater_sub_services_container">
+                              <label for="water_heater_sub_services">Water Heater Sub-Services</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="water_heater_sub_services" name="water_heater_sub_services">
+                                      <option value="" disabled selected>Select a Water Heater Sub-Service</option>
+                                      <option value="geyser_installation">Geyser Installation</option>
+                                      <option value="geyser_uninstallation">Geyser Uninstallation</option>
+                                      <option value="geyser_service">Geyser Service</option>
+                                      <option value="geyser_uninstallation_installation">Geyser Uninstallation & Installation</option>
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <div class="col-12 hidden" id="fridge_sub_services_container">
+                              <label for="fridge_sub_services">Fridge Sub-Services</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="fridge_sub_services" name="fridge_sub_services">
+                                      <option value="" disabled selected>Select a Fridge Sub-Service</option>
+                                      <!-- Add fridge sub-services here -->
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <div class="col-12 hidden" id="microwave_oven_sub_services_container">
+                              <label for="microwave_oven_sub_services">Microwave Oven Sub-Services</label>
+                              <div class="form-floating">
+                                  <select class="form-control" id="microwave_oven_sub_services" name="microwave_oven_sub_services">
+                                      <option value="" disabled selected>Select a Microwave Oven Sub-Service</option>
+                                      <!-- Add microwave oven sub-services here -->
+                                  </select>
+                              </div>
+                          </div>
+                          
+                          <script>
+                              function toggleSubServices(service) {
+                                  const subServiceContainers = [
+                                      'ac_sub_services_container',
+                                      'washing_machine_sub_services_container',
+                                      'led_tv_sub_services_container',
+                                      'ro_sub_services_container',
+                                      'water_heater_sub_services_container',
+                                      'fridge_sub_services_container',
+                                      'microwave_oven_sub_services_container'
+                                  ];
+                          
+                                  subServiceContainers.forEach(container => {
+                                      document.getElementById(container).classList.add('hidden');
+                                  });
+                          
+                                  if (service === 'ac_service') {
+                                      document.getElementById('ac_sub_services_container').classList.remove('hidden');
+                                  } else if (service === 'washing_machine') {
+                                      document.getElementById('washing_machine_sub_services_container').classList.remove('hidden');
+                                  } else if (service === 'led_tv') {
+                                      document.getElementById('led_tv_sub_services_container').classList.remove('hidden');
+                                  } else if (service === 'ro') {
+                                      document.getElementById('ro_sub_services_container').classList.remove('hidden');
+                                  } else if (service === 'water_heater') {
+                                      document.getElementById('water_heater_sub_services_container').classList.remove('hidden');
+                                  } else if (service === 'fridge') {
+                                      document.getElementById('fridge_sub_services_container').classList.remove('hidden');
+                                  } else if (service === 'microwave_oven') {
+                                      document.getElementById('microwave_oven_sub_services_container').classList.remove('hidden');
+                                  }
+                              }
+                          </script>
+                          
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px" name="message"></textarea>
@@ -199,6 +341,16 @@
             </div>
         </div>
     </div>
+    <script>
+      document.getElementById('service').addEventListener('change', function() {
+          var acSubServicesContainer = document.getElementById('ac_sub_services_container');
+          if (this.value === 'ac_service') {
+              acSubServicesContainer.classList.remove('hidden');
+          } else {
+              acSubServicesContainer.classList.add('hidden');
+          }
+      });
+  </script>
 <!-- Business form end -->
      <!-- Footer Start -->
      <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
