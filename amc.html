@@ -94,18 +94,18 @@
       <a href="index.html" class="nav-item nav-link active">Home</a>
       <a href="about.html" class="nav-item nav-link">About Us</a>
       <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle overflow-auto" >Our Services</a>
-        <!-- data-bs-toggle="dropdown" above a tag error code   -->
+        <a href="#" class="nav-link dropdown-toggle overflow-auto" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
         <div class="dropdown-menu bg-light border-0 m-0">
-          <a href="ac.html" class="dropdown-item">AC Repair Service</a>
-          <a href="fridge.html" class="dropdown-item">Fridge Service</a>
-          <a href="washing_machine.html" class="dropdown-item">Washing Machine Service</a>
-          <a href="ro.html" class="dropdown-item">RO Installation</a>
-          <a href="water_heater.html" class="dropdown-item">Water Heater Service</a>
-          <a href="oven.html" class="dropdown-item">Microwave Oven Service</a>
-          <a href="electrical.html" class="dropdown-item">Electricals Service</a>
+            <a href="ac.html" class="dropdown-item">AC </a>
+            <a href="fridge.html" class="dropdown-item">Fridge </a>
+            <a href="washing_machine.html" class="dropdown-item">Washing Machine </a>
+            <a href="ledtv.html" class="dropdown-item">LED TV  </a>
+            <a href="water_heater.html" class="dropdown-item">Water Heater </a>
+            <a href="oven.html" class="dropdown-item">Microwave Oven </a>
+            <a href="electrical.html" class="dropdown-item">Electrical Service</a>
+            <a href="ro.html" class="dropdown-item">RO </a>
         </div>
-      </div>
+    </div>
       <a href="partner.html" class="nav-item nav-link blink-link">Partner with us</a><br>
       <a href="franchise.html" class="nav-item nav-link blink-link">Franchise</a>
       <a href="booking.html" class="nav-item nav-link">Booking</a>
@@ -333,9 +333,9 @@
             </div>
         </div>
     </div>
-    <div class="m-auto   text-center">
+    <!-- <div class="m-auto   text-center">
    <a href="contact.html"> <button id="inquiryBtn" class="bg-primary">Enquire Now</button></a> 
-  </div>
+  </div> -->
 <!-- AMC Form start -->
 <div class="container-fluid overflow-hidden my-5 px-lg-0">
   <div class="container quote px-lg-0">
@@ -467,7 +467,7 @@
     document.getElementById('myForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Collect the form data
+      
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -478,7 +478,7 @@
             requirements: document.getElementById('requirements').value
         };
 
-        // Send the email using EmailJS
+ 
         emailjs.send('service_zdrsnov', 'template_vkh9jln', formData)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
