@@ -30,11 +30,11 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
+<!-- <script>
     (function(){
         emailjs.init("ebeC8sQGmi84zsHcj");
     })();
-</script>
+</script> -->
 </head>
 
 <body>
@@ -112,11 +112,11 @@
             <a href="ro.html" class="dropdown-item">RO </a>
         </div>
     </div>
-      <a href="partner.html" class="nav-item nav-link blink-link">Partner with us</a><br>
-      <a href="franchise.html" class="nav-item nav-link blink-link">Franchise</a>
+      <a href="partner.html" class="nav-item nav-link blink-link">Partner with us<sup>*</sup></a><br>
+      <a href="franchise.html" class="nav-item nav-link blink-link">Franchise<sup>*</sup></a>
       <a href="booking.html" class="nav-item nav-link">Booking</a>
       <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-      <a href="amc.html" class="nav-item nav-link blink-link">AMC</a>
+      <a href="amc.html" class="nav-item nav-link blink-link"> AMC<sup>*</sup></a>
     </div>
     <div class="h-100 d-lg-inline-flex align-items-center d-none">
       <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -460,186 +460,160 @@
   </div>
 </div>
 
-<!-- EmailJS SDK -->
-<!-- JavaScript to handle form submission -->
 <script>
-  document.getElementById('myForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const formData = {
-          name: document.getElementById('name').value,
-          email: document.getElementById('email').value,
-          mobile_number: document.getElementById('mobile_number').value,
-          company_name: document.getElementById('company_name').value,
-          district: document.getElementById('district').value,
-          equipment_details: document.getElementById('equipment_details').value,
-          requirements: document.getElementById('requirements').value
-      };
-
-      // Send form data via EmailJS
-      emailjs.send('service_zdrsnov', 'template_vkh9jln', formData)
-          .then(function(response) {
-              console.log('SUCCESS!', response.status, response.text);
-              alert('Your form has been submitted successfully!');
-          }, function(error) {
-              console.error('FAILED...', error);
-              alert('There was an error submitting your form. Please try again.');
-          });
-
-      // Send form data via WhatsApp
-      const whatsappNumber = "8338438413";
-      const whatsappMessage = `Name: ${formData.name}\nEmail: ${formData.email}\nMobile Number: ${formData.mobile_number}\nCompany Name: ${formData.company_name}\nDistrict: ${formData.district}\nEquipment Details: ${formData.equipment_details}\nRequirements: ${formData.requirements}`;
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-      // Open WhatsApp with pre-filled message
-      window.open(whatsappURL, '_blank');
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    sendMessage(); // Call the sendMessage function
+    sendemail(); 
+    // Call the sendemail function
   });
+
+  function sendMessage() {
+    var phonenumber = "+8438438413"; // Your WhatsApp phone number
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var mobile_number = document.getElementById("mobile_number").value;
+    var company_name = document.getElementById("company_name").value;
+    var district = document.getElementById("district").value;
+    var equipment_details = document.getElementById("equipment_details").value;
+    var requirements = document.getElementById("requirements").value;
+
+    var url = "https://wa.me/" + phonenumber + "?text=" +
+      "Name: " + name + "%0a" +
+      "Email: " + email + "%0a" +
+      "Mobile Number: " + mobile_number + "%0a" +
+      "Company Name: " + company_name + "%0a" +
+      "District: " + district + "%0a" +
+      "Equipment Details: " + equipment_details + "%0a" +
+      "Maintenance Requirements: " + requirements + "%0a" +
+      "This message is sent via the contact form on our website.";
+
+    window.open(url, '_blank').focus();
+  }
+
+  function sendemail() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var mobile_number = document.getElementById("mobile_number").value;
+    var company_name = document.getElementById("company_name").value;
+    var district = document.getElementById("district").value;
+    var equipment_details = document.getElementById("equipment_details").value;
+    var requirements = document.getElementById("requirements").value;
+
+    var templateParams = {
+      name: name,
+      email: email,
+      mobile_number: mobile_number,
+      company_name: company_name,
+      district: district,
+      equipment_details: equipment_details,
+      requirements: requirements
+    };
+
+    emailjs.send("service_zdrsnov", "template_vkh9jln", templateParams)
+      .then(function(response) {
+        console.log("SUCCESS!", response.status, response.text);
+        window.alert("Sent successfully!");
+      }, function(error) {
+        console.error("FAILED...", error);
+        window.alert("Failed to send email. Please try again later.");
+      });
+  }
 </script>
 
-    <style>
-      #inquiryBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-#inquiryBtn.jump {
-    animation: jump 0.5s ease;
-}
-
-@keyframes jump {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-.hidden {
-    display: none;
-}
-
-#inquiryForm {
-    margin-top: 20px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-#inquiryForm label, #inquiryForm input, #inquiryForm textarea {
-    margin-bottom: 10px;
-}
-#inquiryForm input[type="submit"] {
-    padding: 10px;
-    cursor: pointer;
-}
-    </style>
-        <script>
-          // script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const inquiryBtn = document.getElementById('inquiryBtn');
-    const inquiryForm = document.getElementById('inquiryForm');
-
-    inquiryBtn.addEventListener('click', () => {
-        // Add jump animation
-        inquiryBtn.classList.add('jump');
-
-        // Remove the class after animation ends
-        setTimeout(() => {
-            inquiryBtn.classList.remove('jump');
-            // Show the form after the jump animation
-            inquiryForm.classList.remove('hidden');
-        }, 500); // Duration of the animation in milliseconds
-    });
-});
-
-        </script>
+  
+      
 
       <!-- Footer Start -->
       <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             
+          <div class="row g-5">
+            <!-- <div class="col-md-6">
+                <h1 class="text-white mb-4 d-flex w-50"><img class="img-fluid me-3" src="img/Frame 260.png" alt="">Lakshmi Service Point</h1>
+                <span>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</span>
+            </div> -->
+            <!-- <div class="col-md-6">
+                <h5 class="text-light mb-4">Newsletter</h5>
+                <p>Clita erat ipsum et lorem et sit, sed stet lorem sit clita.</p>
+                <div class="position-relative">
+                    <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                </div>
+            </div> -->
             <div class="row g-5">
-                <!-- <div class="col-md-6">
-                    <h1 class="text-white mb-4 d-flex w-50"><img class="img-fluid me-3" src="img/Frame 260.png" alt="">Lakshmi Service Point</h1>
-                    <span>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</span>
-                </div> -->
-                <!-- <div class="col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Clita erat ipsum et lorem et sit, sed stet lorem sit clita.</p>
-                    <div class="position-relative">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                <div class="col-md-6">
+                  <h1 class="text-white mb-4">
+                    <img
+                      class="  me-3" id="imagefluid"
+                      src="./img/Frame 260.png"
+                      alt="" 
+                    />
+                  </h1>
+                  
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-light mt-5"><span
+                      >Welcome to Lakshmi Service Point!
+        
+                      At Lakshmi Service Point, we pride ourselves on delivering top-notch repair and maintenance services for your home appliances. Whether you need assistance with your air conditioner, RO system, water heater, refrigerator, washing machine, or MicroWave Oven, our team of experienced professionals is here to help.</span
+                    ></h5>
                     </div>
-                </div> -->
-                <div class="row g-5">
-                    <div class="col-md-6">
-                      <h1 class="text-white mb-4">
-                        <img
-                          class="  me-3" id="imagefluid"
-                          src="./img/Frame 260.png"
-                          alt="" 
-                        />
-                      </h1>
-                      
-                    </div>
-                    <div class="col-md-6">
-                        <h5 class="text-light mt-5"><span
-                          >Welcome to Lakshmi Service Point!
-            
-                          At Lakshmi Service Point, we pride ourselves on delivering top-notch repair and maintenance services for your home appliances. Whether you need assistance with your air conditioner, RO system, water heater, refrigerator, washing machine, or MicroWave Oven, our team of experienced professionals is here to help.</span
-                        ></h5>
-                        </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Annai,Parvathi Nagar, Opposite to Collector Office, Vengikkal, Tiruvannamalai,Tamil Nadu 606604</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+91 8438438413</p>
-                    <p style="font-size: smaller;"><i class="fa fa-envelope me-3" ></i>support@lakshmiservicepoint.com</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Our Services</h5>
-                    <a class="btn btn-link" href="ac.html">AC Repair Service</a>
-                    <a class="btn btn-link" href="fridge.html">Fridge Service</a>
-                    <a class="btn btn-link" href="washing_machine.html">Washing Machine Service</a>
-                    <a class="btn btn-link" href="ro.html">RO Instalination</a>
-                    <a class="btn btn-link" href="water_heater.html">Water Heater</a>
-                    <a class="btn btn-link" href="electrical.html">Electricals </a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="service.html">Our Services</a>
-                    <a class="btn btn-link" href="index.html">Terms & Condition</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Follow Us</h5>
-                    <div class="d-flex">
-                        <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-              <a class="btn btn-square rounded-circle me-1" href="https://x.com/Lakshmiservice1?t=FULDwPYkk3eZICcNrP1DAQ&s=08"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            
-              <a class="btn btn-square rounded-circle me-1" href="https://youtube.com/@lakshmiservicespoint?si=zKHOr0RNdU-YXlQ2"
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-square rounded-circle me-1" href="https://www.instagram.com/lakshmi_service_point?utm_source=qr&igsh=MXQwbWN6cTk5ZjBpeQ=="
-                ><i class="fab fa-instagram"></i
-              ></a>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Annai,Parvathi Nagar, Opposite to Collector Office, Vengikkal, Tiruvannamalai,Tamil Nadu 606604</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+91 8438438413</p>
+                <p style="font-size: smaller;"><i class="fa fa-envelope me-3" ></i>support@lakshmiservicepoint.com</p>
             </div>
-        </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center text-sm-center mb-3 mb-md-0">
-                      &copy; 2024 All Right Reserved |Lakshmi Service Point
-                  </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Our Services</h5>
+                <a class="btn btn-link" href="ac.html">A/C  </a>
+                <a class="btn btn-link" href="fridge.html">Fridge </a>
+                <a class="btn btn-link" href="washing_machine.html">Washing Machine </a>
+                <a class="btn btn-link" href="ledtv.html">LED TV</a>
+                <a class="btn btn-link" href="water_heater.html">Water Heater</a>
+                <a class="btn btn-link" href="oven.html">Microwave Oven</a>
+                <a class="btn btn-link" href="electrical.html">Electricals </a>
+                <a class="btn btn-link" href="ro.html">RO 
+
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Quick Links</h5>
+                <a class="btn btn-link" href="about.html">About Us</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                <a class="btn btn-link" href="index.html">Our Services</a>
+                <a class="btn btn-link" href="index.html">Terms & Condition</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Follow Us</h5>
+                <div class="d-flex">
+                    <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+          <a class="btn btn-square rounded-circle me-1" href="https://x.com/Lakshmiservice1?t=FULDwPYkk3eZICcNrP1DAQ&s=08"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        
+          <a class="btn btn-square rounded-circle me-1" href="https://youtube.com/@lakshmiservicespoint?si=zKHOr0RNdU-YXlQ2"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a class="btn btn-square rounded-circle me-1" href="https://www.instagram.com/lakshmi_service_point?utm_source=qr&igsh=MXQwbWN6cTk5ZjBpeQ=="
+            ><i class="fab fa-instagram"></i
+          ></a>
+                </div>
             </div>
         </div>
     </div>
+    <div class="container-fluid copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center text-sm-center mb-3 mb-md-0">
+                  &copy; 2024 All Right Reserved |Lakshmi Service Point
+              </div>
+        </div>
+    </div>
+</div>
     <!-- Footer End -->
 
 
