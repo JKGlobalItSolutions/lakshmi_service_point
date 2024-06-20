@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -26,108 +28,117 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 
     <style>
-      .hidden {
-          display: none;
-      }
-  </style>
+        .hidden {
+            display: none;
+        }
+    </style>
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function() {
-            emailjs.init("PV-S6g-vK8SbNyYaC"); // Replace with your EmailJS user ID
+        (function () {
+            emailjs.init("PV-S6g-vK8SbNyYaC");
         })();
     </script>
+
 </head>
+
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
-  <!-- Topbar Start -->
-  <div
-  class="container-fluid bg-dark text-white py-2 px-0 d-none d-lg-block"
->
-  <div class="row gx-0 align-items-center">
-    <div class="col-lg-7 px-5 text-start">
-      <div class="h-100 d-inline-flex align-items-center me-4">
-        <small class="fa fa-phone-alt me-2"></small>
-        <small>+91 8438438413</small>
-      </div>
-      <div class="h-100 d-inline-flex align-items-center me-4">
-        <small class="far fa-envelope-open me-2"></small>
-        <small>support@lakshmiservicepoint.com</small>
-      </div>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-white py-2 px-0 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-phone-alt me-2"></small>
+                    <small>+91 8438438413</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="far fa-envelope-open me-2"></small>
+                    <small>support@lakshmiservicepoint.com</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <ol class="breadcrumb justify-content-end mb-0">
+                    <li class="breadcrumb-item">
+                        <a class="text-white small" href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="text-white small" href="#">Terms</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="text-white small" href="#">Privacy</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="text-white small" href="#">Support</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-5 px-5 text-end">
-      <ol class="breadcrumb justify-content-end mb-0">
-        <li class="breadcrumb-item">
-          <a class="text-white small" href="#">Home</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="text-white small" href="#">Terms</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="text-white small" href="#">Privacy</a>
-        </li>
-        <li class="breadcrumb-item">
-          <a class="text-white small" href="#">Support</a>
-        </li>
-      </ol>
-    </div>
-  </div>
-</div>
-<!-- Topbar End -->
+    <!-- Topbar End -->
 
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-    <a href="index.html" class="navbar-brand d-flex align-items-center">
-      <h1 class="text-white mt-2">
-        <img class="me-3" src="./img/lakshmi_logo 1.png" alt="" />
-      </h1>
-    </a>
-    <button
-      type="button"
-      class="navbar-toggler"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarCollapse"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
-        <a href="index.html" class="nav-item nav-link active">Home</a>
-        <a href="about.html" class="nav-item nav-link">About Us</a>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle overflow-auto" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
-          <div class="dropdown-menu bg-light border-0 m-0">
-              <a href="ac.html" class="dropdown-item">AC </a>
-              <a href="fridge.html" class="dropdown-item">Fridge </a>
-              <a href="washing_machine.html" class="dropdown-item">Washing Machine </a>
-              <a href="ledtv.html" class="dropdown-item">LED TV  </a>
-              <a href="water_heater.html" class="dropdown-item">Water Heater </a>
-              <a href="oven.html" class="dropdown-item">Microwave Oven </a>
-              <a href="electrical.html" class="dropdown-item">Electrical Service</a>
-              <a href="ro.html" class="dropdown-item">RO </a>
-          </div>
-      </div>
-        <a href="partner.html" class="nav-item nav-link blink-link">Partner with us</a><br>
-        <a href="franchise.html" class="nav-item nav-link blink-link">Franchise</a>
-        <a href="booking.html" class="nav-item nav-link">Booking</a>
-        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-        <a href="amc.html" class="nav-item nav-link blink-link">AMC</a>
-      </div>
-      <div class="h-100 d-lg-inline-flex align-items-center d-none">
-        <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://x.com/Lakshmiservice1?t=FULDwPYkk3eZICcNrP1DAQ&s=08" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://youtube.com/@lakshmiservicespoint?si=zKHOr0RNdU-YXlQ2" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="https://www.instagram.com/lakshmi_service_point?utm_source=qr&igsh=MXQwbWN6cTk5ZjBpeQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h1 class="text-white mt-2">
+                <img class="me-3" src="./img/lakshmi_logo 1.png" alt="" />
+            </h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle overflow-auto" data-bs-toggle="dropdown"
+                        aria-expanded="false">Our Services</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="ac.html" class="dropdown-item">AC </a>
+                        <a href="fridge.html" class="dropdown-item">Fridge </a>
+                        <a href="washing_machine.html" class="dropdown-item">Washing Machine </a>
+                        <a href="ledtv.html" class="dropdown-item">LED TV </a>
+                        <a href="water_heater.html" class="dropdown-item">Water Heater </a>
+                        <a href="oven.html" class="dropdown-item">Microwave Oven </a>
+                        <a href="electrical.html" class="dropdown-item">Electrical Service</a>
+                        <a href="ro.html" class="dropdown-item">RO </a>
+                    </div>
+                </div>
+                <a href="partner.html" class="nav-item nav-link blink-link">Partner with us</a><br>
+                <a href="franchise.html" class="nav-item nav-link blink-link">Franchise</a>
+                <a href="booking.html" class="nav-item nav-link">Booking</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="amc.html" class="nav-item nav-link blink-link">AMC</a>
+            </div>
+            <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2"
+                    href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2"
+                    href="https://x.com/Lakshmiservice1?t=FULDwPYkk3eZICcNrP1DAQ&s=08" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2"
+                    href="https://youtube.com/@lakshmiservicespoint?si=zKHOr0RNdU-YXlQ2" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0"
+                    href="https://www.instagram.com/lakshmi_service_point?utm_source=qr&igsh=MXQwbWN6cTk5ZjBpeQ=="
+                    target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
 
     <!-- Page Header Start -->
@@ -144,185 +155,61 @@
     </div>
     <!-- Page Header End -->
 
-<!-- Business form start -->
+    <!-- Business form start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <h1 class="display-6 mb-5">Book Your Service</h1>
-                    <form id="booking-form">
+                    <form id="myForm">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" name="user_name">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name"
+                                        name="user_name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" name="user_email">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email"
+                                        name="user_email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                              <div class="form-floating">
-                                <input type="tel" class="form-control" id="mobile" placeholder="Mobile Number" name="mobile" pattern="[0-9]{10}">
-                                <label for="mobile">Mobile Number</label>
-                            </div>
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="mobile" placeholder="Mobile Number"
+                                        name="mobile" pattern="[0-9]{10}">
+                                    <label for="mobile">Mobile Number</label>
+                                </div>
                             </div>
                             <div class="col-12">
-                              <label for="service">Service</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="service" name="service" onchange="toggleSubServices(this.value)">
-                                      <option value="" disabled selected>Select a Service</option>
-                                      <option value="ac_service">AC Service</option>
-                                      <option value="fridge">Fridge</option>
-                                      <option value="washing_machine">Washing Machine</option>
-                                      <option value="ro">RO</option>
-                                      <option value="water_heater">Water Heater</option>
-                                      <option value="microwave_oven">Microwave Oven</option>
-                                      <option value="led_tv">LED TV</option>
-                                  </select>
-                              </div>
-                          </div>
-                          <div class="col-12 hidden" id="ac_sub_services_container">
-                              <label for="ac_sub_services">AC Sub-Services</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="ac_sub_services" name="ac_sub_services">
-                                      <option value="" disabled selected>Select an AC Sub-Service</option>
-                                      <option value="ac_uninstallation">AC Uninstallation</option>
-                                      <option value="ac_uninstallation_installation">AC Uninstallation & Installation</option>
-                                      <option value="window_ac_uninstallation">Window AC Uninstallation</option>
-                                      <option value="ac_gas_filling">AC Gas Filling/Refilling (Get quote)</option>
-                                      <option value="duct_cassette_ac">Duct AC and Cassette AC (Per visit Inspection charge)</option>
-                                      <option value="ac_deep_cleaning">AC Deep Cleaning Service</option>
-                                      <option value="window_ac_uninstallation_installation">Window AC Uninstallation and Installation</option>
-                                      <option value="window_ac_installation">Window AC Installation</option>
-                                      <option value="ac_installation">AC Installation</option>
-                                      <option value="ac_general_cleaning">AC General Cleaning Service</option>
-                                      <option value="ac_repair_service">AC Repair & Service</option>
-                                  </select>
-                              </div>
-                          </div>
-                          
-                          <div class="col-12 hidden" id="washing_machine_sub_services_container">
-                              <label for="washing_machine_sub_services">Washing Machine Sub-Services</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="washing_machine_sub_services" name="washing_machine_sub_services">
-                                      <option value="" disabled selected>Select a Washing Machine Sub-Service</option>
-                                      <option value="semi_automatic">Semi-Automatic</option>
-                                      <option value="automatic">Automatic</option>
-                                      <option value="front_load">Front-load</option>
-                                  </select>
-                              </div>
-                          </div>
-                          
-                          <div class="col-12 hidden" id="led_tv_sub_services_container">
-                              <label for="led_tv_sub_services">LED TV Sub-Services</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="led_tv_sub_services" name="led_tv_sub_services">
-                                      <option value="" disabled selected>Select an LED TV Sub-Service</option>
-                                      <option value="tv_wall_mounting_below_40">TV Wall Mounting/Installation - Below 40"</option>
-                                      <option value="tv_uninstallation_below_40">TV Uninstallation - Below 40"</option>
-                                      <option value="tv_wall_mounting_uninstallation_above_55">TV Wall Mounting and Uninstallation - Above 55"</option>
-                                      <option value="tv_uninstallation_above_55">TV Uninstallation - Above 55"</option>
-                                      <option value="tv_wall_mounting_below_75">TV Wall Mounting/Installation - Below 75"</option>
-                                      <option value="led_lcd_tv_service">LED/LCD TV Service (Per visit Inspection charge)</option>
-                                      <option value="tv_wall_mounting_above_40">TV Wall Mounting/Installation - Above 40"</option>
-                                      <option value="tv_wall_mounting_uninstallation_below_40">TV Wall Mounting and Uninstallation - Below 40"</option>
-                                      <option value="tv_uninstallation_above_40">TV Uninstallation - Above 40"</option>
-                                      <option value="tv_wall_mounting_above_55">TV Wall Mounting/Installation - Above 55"</option>
-                                      <option value="tv_wall_mounting_above_75">TV Wall Mounting/Installation - Above 75"</option>
-                                      <option value="crt_tv_service">CRT TV Service</option>
-                                  </select>
-                              </div>
-                          </div>
-                          
-                          <div class="col-12 hidden" id="ro_sub_services_container">
-                              <label for="ro_sub_services">RO Sub-Services</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="ro_sub_services" name="ro_sub_services">
-                                      <option value="" disabled selected>Select an RO Sub-Service</option>
-                                      <option value="ro_uninstallation">RO Uninstallation</option>
-                                      <option value="ro_cleaning">RO Cleaning</option>
-                                      <option value="ro_repair_service">RO Repair and Service</option>
-                                      <option value="ro_uninstallation_installation">RO Uninstallation and Installation</option>
-                                      <option value="ro_repair">RO Repair</option>
-                                      <option value="ro_installation">RO Installation</option>
-                                  </select>
-                              </div>
-                          </div>
-                          
-                          <div class="col-12 hidden" id="water_heater_sub_services_container">
-                              <label for="water_heater_sub_services">Water Heater Sub-Services</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="water_heater_sub_services" name="water_heater_sub_services">
-                                      <option value="" disabled selected>Select a Water Heater Sub-Service</option>
-                                      <option value="geyser_installation">Geyser Installation</option>
-                                      <option value="geyser_uninstallation">Geyser Uninstallation</option>
-                                      <option value="geyser_service">Geyser Service</option>
-                                      <option value="geyser_uninstallation_installation">Geyser Uninstallation & Installation</option>
-                                  </select>
-                              </div>
-                          </div>
-                          
-                          <div class="col-12 hidden" id="fridge_sub_services_container">
-                              <label for="fridge_sub_services">Fridge Sub-Services</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="fridge_sub_services" name="fridge_sub_services">
-                                      <option value="" disabled selected>Select a Fridge Sub-Service</option>
-                                      <!-- Add fridge sub-services here -->
-                                  </select>
-                              </div>
-                          </div>
-                          
-                          <div class="col-12 hidden" id="microwave_oven_sub_services_container">
-                              <label for="microwave_oven_sub_services">Microwave Oven Sub-Services</label>
-                              <div class="form-floating">
-                                  <select class="form-control" id="microwave_oven_sub_services" name="microwave_oven_sub_services">
-                                      <option value="" disabled selected>Select a Microwave Oven Sub-Service</option>
-                                      <!-- Add microwave oven sub-services here -->
-                                  </select>
-                              </div>
-                          </div>
-                          
-                          <script>
-                              function toggleSubServices(service) {
-                                  const subServiceContainers = [
-                                      'ac_sub_services_container',
-                                      'washing_machine_sub_services_container',
-                                      'led_tv_sub_services_container',
-                                      'ro_sub_services_container',
-                                      'water_heater_sub_services_container',
-                                      'fridge_sub_services_container',
-                                      'microwave_oven_sub_services_container'
-                                  ];
-                          
-                                  subServiceContainers.forEach(container => {
-                                      document.getElementById(container).classList.add('hidden');
-                                  });
-                          
-                                  if (service === 'ac_service') {
-                                      document.getElementById('ac_sub_services_container').classList.remove('hidden');
-                                  } else if (service === 'washing_machine') {
-                                      document.getElementById('washing_machine_sub_services_container').classList.remove('hidden');
-                                  } else if (service === 'led_tv') {
-                                      document.getElementById('led_tv_sub_services_container').classList.remove('hidden');
-                                  } else if (service === 'ro') {
-                                      document.getElementById('ro_sub_services_container').classList.remove('hidden');
-                                  } else if (service === 'water_heater') {
-                                      document.getElementById('water_heater_sub_services_container').classList.remove('hidden');
-                                  } else if (service === 'fridge') {
-                                      document.getElementById('fridge_sub_services_container').classList.remove('hidden');
-                                  } else if (service === 'microwave_oven') {
-                                      document.getElementById('microwave_oven_sub_services_container').classList.remove('hidden');
-                                  }
-                              }
-                          </script>
-                          
+                                <div class="form-group">
+                                    <label for="services">Services:</label>
+                                    <select class="form-control" id="services" required>
+                                        <option value="">Select a service</option>
+                                        <option value="ac">AC</option>
+                                        <option value="fridge">Fridge</option>
+                                        <option value="washingMachine">Washing Machine</option>
+                                        <option value="ro">RO</option>
+                                        <option value="waterHeater">Water Heater</option>
+                                        <option value="microwaveOven">Microwave Oven</option>
+                                        <option value="ledTv">LED TV</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="subServiceGroup" style="display: none;">
+                                    <label for="subService">Sub Service:</label>
+                                    <select class="form-control" id="subService " required>
+                                        <!-- Options will be populated dynamically -->
+                                    </select>
+                                </div>
+                            </div>
+
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px" name="message"></textarea>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                        style="height: 100px" name="message"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
@@ -331,36 +218,63 @@
                             </div>
                         </div>
                     </form>
+                    <!-- sub service start  -->
+                    <script>
+                        document.getElementById('services').addEventListener('change', function() {
+                            var subServiceGroup = document.getElementById('subServiceGroup');
+                            var subService = document.getElementById('subService');
+                            subService.innerHTML = ''; // Clear previous options
+                        
+                            if (this.value) {
+                                subServiceGroup.style.display = 'block';
+                        
+                                var subServices = {
+                                    ac: ['AC Installation', 'AC Uninstallation', 'AC Repair'],
+                                    fridge: ['Fridge Installation', 'Fridge Repair'],
+                                    washingMachine: ['Washing Machine Installation', 'Washing Machine Repair'],
+                                    ro: ['RO Installation', 'RO Repair'],
+                                    waterHeater: ['Water Heater Installation', 'Water Heater Repair'],
+                                    microwaveOven: ['Microwave Oven Installation', 'Microwave Oven Repair'],
+                                    ledTv: ['LED TV Installation', 'LED TV Repair']
+                                };
+                        
+                                subServices[this.value].forEach(function(item) {
+                                    var option = document.createElement('option');
+                                    option.value = item.toLowerCase().replace(/ /g, '');
+                                    option.textContent = item;
+                                    subService.appendChild(option);
+                                });
+                            } else {
+                                subServiceGroup.style.display = 'none';
+                            }
+                        });
+                        </script>
+                    <!-- sub service end  -->
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
                     <div class="position-relative overflow-hidden h-100">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.7460153641964!2d79.0686893750426!3d12.265459429966384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x291ce96ac1c6437f%3A0xb19fa9a9666f39f5!2sJK%20GLOBAL%20IT%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1718354614603!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.7460153641964!2d79.0686893750426!3d12.265459429966384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x291ce96ac1c6437f%3A0xb19fa9a9666f39f5!2sJK%20GLOBAL%20IT%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1718354614603!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-      document.getElementById('service').addEventListener('change', function() {
-          var acSubServicesContainer = document.getElementById('ac_sub_services_container');
-          if (this.value === 'ac_service') {
-              acSubServicesContainer.classList.remove('hidden');
-          } else {
-              acSubServicesContainer.classList.add('hidden');
-          }
-      });
-  </script>
-<!-- Business form end -->
-     <!-- Footer Start -->
-     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-      <div class="container py-5">
-          
-          <div class="row g-5">
-              <!-- <div class="col-md-6">
+
+
+    <!-- Business form end -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+
+            <div class="row g-5">
+                <!-- <div class="col-md-6">
                   <h1 class="text-white mb-4 d-flex w-50"><img class="img-fluid me-3" src="img/Frame 260.png" alt="">Lakshmi Service Point</h1>
                   <span>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</span>
               </div> -->
-              <!-- <div class="col-md-6">
+                <!-- <div class="col-md-6">
                   <h5 class="text-light mb-4">Newsletter</h5>
                   <p>Clita erat ipsum et lorem et sit, sed stet lorem sit clita.</p>
                   <div class="position-relative">
@@ -368,106 +282,165 @@
                       <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                   </div>
               </div> -->
-              <div class="row g-5">
-                  <div class="col-md-6">
-                    <h1 class="text-white mb-4">
-                      <img
-                        class="  me-3" id="imagefluid"
-                        src="./img/Frame 260.png"
-                        alt="" 
-                      />
-                    </h1>
-                    
-                  </div>
-                  <div class="col-md-6">
-                      <h5 class="text-light mt-5"><span
-                        >Welcome to Lakshmi Service Point!
-          
-                        At Lakshmi Service Point, we pride ourselves on delivering top-notch repair and maintenance services for your home appliances. Whether you need assistance with your air conditioner, RO system, water heater, refrigerator, washing machine, or MicroWave Oven, our team of experienced professionals is here to help.</span
-                      ></h5>
-                      </div>
-              <div class="col-lg-3 col-md-6">
-                  <h5 class="text-light mb-4">Get In Touch</h5>
-                  <p><i class="fa fa-map-marker-alt me-3"></i>Annai,Parvathi Nagar, Opposite to Collector Office, Vengikkal, Tiruvannamalai,Tamil Nadu 606604</p>
-                  <p><i class="fa fa-phone-alt me-3"></i>+91 8438438413</p>
-                  <p style="font-size: smaller;"><i class="fa fa-envelope me-3" ></i>support@lakshmiservicepoint.com</p>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <h5 class="text-light mb-4">Our Services</h5>
-                  <a class="btn btn-link" href="ac.html">AC Repair Service</a>
-                  <a class="btn btn-link" href="fridge.html">Fridge Service</a>
-                  <a class="btn btn-link" href="washing_machine.html">Washing Machine Service</a>
-                  <a class="btn btn-link" href="ro.html">RO Instalination</a>
-                  <a class="btn btn-link" href="water_heater.html">Water Heater</a>
-                  <a class="btn btn-link" href="electrical.html">Electricals </a>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <h5 class="text-light mb-4">Quick Links</h5>
-                  <a class="btn btn-link" href="about.html">About Us</a>
-                  <a class="btn btn-link" href="contact.html">Contact Us</a>
-                  <a class="btn btn-link" href="service.html">Our Services</a>
-                  <a class="btn btn-link" href="index.html">Terms & Condition</a>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <h5 class="text-light mb-4">Follow Us</h5>
-                  <div class="d-flex">
-                      <a class="btn btn-square rounded-circle me-1" href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-            <a class="btn btn-square rounded-circle me-1" href="https://x.com/Lakshmiservice1?t=FULDwPYkk3eZICcNrP1DAQ&s=08"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          
-            <a class="btn btn-square rounded-circle me-1" href="https://youtube.com/@lakshmiservicespoint?si=zKHOr0RNdU-YXlQ2"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a class="btn btn-square rounded-circle me-1" href="https://www.instagram.com/lakshmi_service_point?utm_source=qr&igsh=MXQwbWN6cTk5ZjBpeQ=="
-              ><i class="fab fa-instagram"></i
-            ></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="container-fluid copyright">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12 text-center text-sm-center mb-3 mb-md-0">
-                    &copy; 2024 All Right Reserved |Lakshmi Service Point
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <h1 class="text-white mb-4">
+                            <img class="  me-3" id="imagefluid" src="./img/Frame 260.png" alt="" />
+                        </h1>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-light mt-5"><span>Welcome to Lakshmi Service Point!
+
+                                At Lakshmi Service Point, we pride ourselves on delivering top-notch repair and
+                                maintenance services for your home appliances. Whether you need assistance with your air
+                                conditioner, RO system, water heater, refrigerator, washing machine, or MicroWave Oven,
+                                our team of experienced professionals is here to help.</span></h5>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-light mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Annai,Parvathi Nagar, Opposite to Collector Office,
+                            Vengikkal, Tiruvannamalai,Tamil Nadu 606604</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+91 8438438413</p>
+                        <p style="font-size: smaller;"><i
+                                class="fa fa-envelope me-3"></i>support@lakshmiservicepoint.com</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-light mb-4">Our Services</h5>
+                        <a class="btn btn-link" href="ac.html">AC Repair Service</a>
+                        <a class="btn btn-link" href="fridge.html">Fridge Service</a>
+                        <a class="btn btn-link" href="washing_machine.html">Washing Machine Service</a>
+                        <a class="btn btn-link" href="ro.html">RO Instalination</a>
+                        <a class="btn btn-link" href="water_heater.html">Water Heater</a>
+                        <a class="btn btn-link" href="electrical.html">Electricals </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-light mb-4">Quick Links</h5>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="service.html">Our Services</a>
+                        <a class="btn btn-link" href="index.html">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="text-light mb-4">Follow Us</h5>
+                        <div class="d-flex">
+                            <a class="btn btn-square rounded-circle me-1"
+                                href="https://www.facebook.com/profile.php?id=61560460426198&mibextid=kFxxJD"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square rounded-circle me-1"
+                                href="https://x.com/Lakshmiservice1?t=FULDwPYkk3eZICcNrP1DAQ&s=08"><i
+                                    class="fab fa-twitter"></i></a>
+
+                            <a class="btn btn-square rounded-circle me-1"
+                                href="https://youtube.com/@lakshmiservicespoint?si=zKHOr0RNdU-YXlQ2"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="btn btn-square rounded-circle me-1"
+                                href="https://www.instagram.com/lakshmi_service_point?utm_source=qr&igsh=MXQwbWN6cTk5ZjBpeQ=="><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
                 </div>
-          </div>
-      </div>
-  </div>
-  <!-- Footer End -->
+            </div>
+            <div class="container-fluid copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center text-sm-center mb-3 mb-md-0">
+                            &copy; 2024 All Right Reserved |Lakshmi Service Point
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-    <!-- emaijs form start -->
-    <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+            <script type="text/javascript">
+                function toggleSubServices(service) {
+                    const subServiceContainers = document.querySelectorAll('.hidden');
+                    subServiceContainers.forEach(container => container.classList.add('hidden'));
 
-            emailjs.sendForm('service_3hjnd5i', 'template_50f7gw2', this)
-                .then(function() {
-                    alert('Message sent successfully!');
-                }, function(error) {
-                    alert('Failed to send message: ' + JSON.stringify(error));
+                    if (service === 'ac_service') {
+                        document.getElementById('ac_sub_services_container').classList.remove('hidden');
+                    } else if (service === 'washing_machine') {
+                        document.getElementById('washing_machine_sub_services_container').classList.remove('hidden');
+                    } else if (service === 'led_tv') {
+                        document.getElementById('led_tv_sub_services_container').classList.remove('hidden');
+                    } else if (service === 'ro') {
+                        document.getElementById('ro_sub_services_container').classList.remove('hidden');
+                    } else if (service === 'water_heater') {
+                        document.getElementById('water_heater_sub_services_container').classList.remove('hidden');
+                    } else if (service === 'fridge') {
+                        document.getElementById('fridge_sub_services_container').classList.remove('hidden');
+                    } else if (service === 'microwave_oven') {
+                        document.getElementById('microwave_oven_sub_services_container').classList.remove('hidden');
+                    }
+                }
+            </script>
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+                    class="bi bi-arrow-up"></i></a>
+            <!-- emaijs form start -->
+            <script>
+                document.getElementById("myForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Prevent default form submission
+                    sendMessage(); // Call the sendMessage function
+                    // sendemail();
                 });
-        });
-    </script>
-    <!-- emaijs form start -->
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/parallax/parallax.min.js"></script>
+            
+                function sendMessage() {
+                    var phonenumber = "+8438438413"; // Your WhatsApp phone number
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var mobile = document.getElementById("mobile").value;
+                    var message = document.getElementById("message").value;
+                    var service = document.getElementById("service").value;
+            
+              var url = "https://wa.me/" + phonenumber + "?text=" +
+                  "Name: " + name + "%0a" +
+                  "Email: " + email + "%0a" +
+                  "mobile: " + mobile + "%0a" +
+                  "Message: " + message + "%0a" +
+                  "Service: " + service + "%0a" +
+                  "This message is sent via the contact form on our website.";
+            
+                window.open(url, '_blank').focus();
+              }
+                  function sendemail() {
+                    var service = document.getElementById("service").value;
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var mobile = document.getElementById("mobile").value;
+                    var message = document.getElementById("message").value;
+            
+                    var templateParams = {
+                        service: service,
+                        name: name,
+                        email: email,
+                        mobile: mobile,
+                        message: message,
+                    };
+            
+                    emailjs
+                      .send("service_3hjnd5i", "template_50f7gw2", templateParams)
+                      .then(function (response) {
+                        console.log("SUCCESS!", response.status, response.text);
+                        window.alert("Sent successfully!");
+                      });
+                  }
+                </script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+            <!-- emaijs form end -->
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/wow/wow.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/waypoints/waypoints.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/counterup/counterup.min.js"></script>
+            <script src="lib/parallax/parallax.min.js"></script>
+
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
 </body>
 
 </html>
