@@ -204,7 +204,7 @@
                         document.getElementById("myForm").addEventListener("submit", function(event) {
                             event.preventDefault(); // Prevent default form submission
                             sendMessage(); // Call the sendMessage function
-                            // sendEmail();
+                            sendEmail();
                              // Call the sendEmail function
                         });
                     
@@ -242,7 +242,7 @@
                                 name: name,
                                 email: email,
                                 mobile_number: mobileNumber,
-                                message: message,
+                                message: message,   
                             };
                     
                             emailjs.send("service_3hjnd5i", "template_50f7gw2", templateParams)
