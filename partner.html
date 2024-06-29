@@ -377,6 +377,7 @@
         var mobile_number = document.getElementById("mobile_number").value;
         var business_name = document.getElementById("business_name").value;
         var district = document.getElementById("district").value;
+        var jobrole = document.getElementById("jobrole").value;
       
         var url = "https://wa.me/" + phonenumber + "?text=" +
           "Name: " + name + "%0a" +
@@ -384,6 +385,7 @@
           "Mobile Number: " + mobile_number + "%0a" +
           "Business Name: " + business_name + "%0a" +
           "District: " + district + "%0a" +
+          "jobrole: " + jobrole + "%0a" +
           "This message is sent via the contact form on our website.";
       
         window.open(url, '_blank').focus();
@@ -395,15 +397,17 @@
         var mobile_number = document.getElementById("mobile_number").value;
         var business_name = document.getElementById("business_name").value;
         var district = document.getElementById("district").value;
-        var proof = document.getElementById("fileUpload").files[0]; // Correctly reference file input
+        var jobrole = document.getElementById("jobrole").value;
+
       
         var templateParams = {
           district: district,
-          proof: proof,
           name: name,
           gmail: gmail,
           mobile_number: mobile_number,
           business_name: business_name,
+          jobrole: jobrole,
+
         };
       
         emailjs.send("service_v4mt5xn", "template_m0ocm5l", templateParams)
