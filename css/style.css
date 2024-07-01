@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FF800F;
+    --primary: #ff0000;
     --secondary: #001064;
     --light: #F6F7F8;
     --dark: #010A35;
@@ -87,6 +87,8 @@
 
 .navbar .navbar-brand img {
     max-height: 100px;
+    max-width: 200px;
+
     
 
 }
@@ -116,7 +118,7 @@
 @media (max-width: 991.98px) {
     .navbar .navbar-brand img {
         max-height: 100px;
-        /* max-width: 200px; */
+        max-width: 200px;
     }
 
     .navbar .navbar-nav {
@@ -620,7 +622,6 @@
         padding: 10px;
         cursor: pointer;
     }
-
       /* enquire and booking button end */
 /* book now button start */
 /* #booknow {
@@ -640,7 +641,6 @@
     border-radius: 5px;
 
 } */
-  
   .button-container {
     display: flex;
     justify-content: center;

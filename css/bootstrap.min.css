@@ -2553,7 +2553,7 @@ fieldset:disabled .btn {
 }
 .btn-primary {
   color: #000;
-  background-color: #FC4100;
+  background-color: #ff0000;
   border-color: #ff800f;
 }
 .btn-primary:hover {
@@ -6829,7 +6829,7 @@ fieldset:disabled .btn {
   color: inherit !important;
 }
 .bg-primary {
-  background-color: #ff800f !important;
+  background-color: #ff0000 ;
 }
 .bg-secondary {
   background-color: #001064 !important;
