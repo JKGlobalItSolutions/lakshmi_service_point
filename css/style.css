@@ -557,7 +557,7 @@
         }
         50% {
           opacity: 1; /* Ensure the text is visible */
-          background-color: #FC4100; /* Highlight color */
+          background-color: #ff0000; /* Highlight color */
           color: rgb(246, 239, 239); /* Text color during the blink */
           border: 2px  rgb(50, 49, 49); /* Border for the blinking box */
           border-radius: 5%;
