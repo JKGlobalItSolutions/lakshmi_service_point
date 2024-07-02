@@ -233,9 +233,9 @@
                       </div>
                     </div>
                     <div class="col-sm-6">
-                      <label for="fileUpload" class="fw-bolder">Aadhar or any ID Proof</label>
+                      <label for="aadharnumber" class="fw-bolder">Enter Your Aadhar Number</label>
                       <div class="form-floating">
-                        <input type="file" class="form-control" id="fileUpload" placeholder="Choose File" />
+                        <input type="text" class="form-control" id="aadharnumber" placeholder="Aadhar Number" required/>
                       </div>
                     </div>
                     <div class="col-12">
@@ -255,124 +255,71 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
+    
+    <script>
       (function () {
-        emailjs.init("T1MyGs7xr5h_Ia8bU");
+        emailjs.init("ebeC8sQGmi84zsHcj");
       })();
-  
-      document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent default form submission
-          uploadFileAndSendMessage(); // Call the uploadFileAndSendMessage function
-        });
-        
+    
+      document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        sendMessage(); // Call the sendMessage function
+        sendEmail(); // Call the sendEmail function
       });
-  
-      function uploadFileAndSendMessage() {
+    
+      function sendMessage() {
         var phonenumber = "+8438438413"; // Your WhatsApp phone number
         var name = document.getElementById("name").value;
         var gmail = document.getElementById("gmail").value;
         var mobile_number = document.getElementById("mobile_number").value;
         var business_name = document.getElementById("business_name").value;
         var district = document.getElementById("district").value;
-        var fileInput = document.getElementById("fileUpload");
-  
-        if (fileInput.files.length > 0) {
-          var file = fileInput.files[0];
-          var formData = new FormData();
-          formData.append("file", file);
-  
-          // Upload the file to your server
-          fetch('/upload', {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              var fileUrl = data.fileUrl; // URL of the uploaded file
-  
-              var url = "https://wa.me/" + phonenumber + "?text=" +
-                "Name: " + name + "%0a" +
-                "Gmail: " + gmail + "%0a" +
-                "Mobile Number: " + mobile_number + "%0a" +
-                "Business Name: " + business_name + "%0a" +
-                "District: " + district + "%0a" +
-                "File: " + fileUrl + "%0a" +
-                "This message is sent via the contact form on our website.";
-  
-              window.open(url, '_blank').focus();
-              sendEmail(name, gmail, mobile_number, business_name, district, file, file.name); // Call the sendEmail function
-            } else {
-              window.alert("Failed to upload file. Please try again.");
-            }
-          })
-          .catch(error => {
-            console.error("Error uploading file:", error);
-            window.alert("Failed to upload file. Please try again.");
-          });
-        } else {
-          var url = "https://wa.me/" + phonenumber + "?text=" +
-            "Name: " + name + "%0a" +
-            "Gmail: " + gmail + "%0a" +
-            "Mobile Number: " + mobile_number + "%0a" +
-            "Business Name: " + business_name + "%0a" +
-            "District: " + district + "%0a" +
-            "This message is sent via the contact form on our website.";
-  
-          window.open(url, '_blank').focus();
-          sendEmail(name, gmail, mobile_number, business_name, district, null, ""); // Call the sendEmail function without file
-        }
+        var aadhar_number = document.getElementById("aadharnumber").value;
+    
+        var url = "https://wa.me/" + phonenumber + "?text=" +
+          "Name: " + name + "%0a" +
+          "Email: " + gmail + "%0a" +
+          "Mobile Number: " + mobile_number + "%0a" +
+          "Business Name: " + business_name + "%0a" +
+          "District: " + district + "%0a" +
+          "Aadhar Number: " + aadhar_number + "%0a" +
+          "This message is sent via the franchise enquiry form on our website.";
+    
+        window.open(url, '_blank').focus();
       }
-  
-      function sendEmail(name, gmail, mobile_number, business_name, district, file, fileName) {
-        if (file) {
-          var reader = new FileReader();
-          reader.onload = function (event) {
-            var base64File = event.target.result.split(',')[1];
-  
-            var templateParams = {
-              name: name,
-              gmail: gmail,
-              mobile_number: mobile_number,
-              business_name: business_name,
-              district: district,
-              proof: base64File, // Base64 encoded file
-              fileName: fileName // File name
-            };
-  
-            emailjs.send("service_v4mt5xn", "template_ob7m2me", templateParams)
-              .then(function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-                window.alert("Sent successfully!");
-              }, function (error) {
-                console.error("FAILED...", error);
-                window.alert("Failed to send email. Please try again later.");
-              });
-          };
-          reader.readAsDataURL(file);
-        } else {
-          var templateParams = {
-            name: name,
-            gmail: gmail,
-            mobile_number: mobile_number,
-            business_name: business_name,
-            district: district,
-            proof: "", // No file uploaded
-            fileName: ""
-          };
-  
-          emailjs.send("service_v4mt5xn", "template_ob7m2me", templateParams)
-            .then(function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-              window.alert("Sent successfully!");
-            }, function (error) {
-              console.error("FAILED...", error);
-              window.alert("Failed to send email. Please try again later.");
-            });
-        }
+    
+      function sendEmail() {
+        var name = document.getElementById("name").value;
+        var gmail = document.getElementById("gmail").value;
+        var mobile_number = document.getElementById("mobile_number").value;
+        var business_name = document.getElementById("business_name").value;
+        var district = document.getElementById("district").value;
+        var aadhar_number = document.getElementById("aadharnumber").value;
+        var message = document.getElementById("message").value;
+    
+        var templateParams = {
+          name: name,
+          gmail: gmail,
+          mobile_number: mobile_number,
+          business_name: business_name,
+          district: district,
+          aadhar_number: aadhar_number,
+          message: message
+        };
+    
+        emailjs.send("service_zdrsnov", "template_4bwlabe", templateParams)
+          .then(function(response) {
+            console.log("Email sent successfully", response.status, response.text);
+            alert("Your enquiry has been submitted successfully!");
+            document.getElementById("myForm").reset(); // Reset form after successful submission
+          }, function(error) {
+            console.error("Email sending failed", error);
+            alert("Oops! Something went wrong. Please try again later.");
+          });
       }
     </script>
+    
+    
     <!-- Franshice End -->
        <!-- Footer Start -->
        <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
